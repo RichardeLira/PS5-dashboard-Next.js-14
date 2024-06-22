@@ -1,10 +1,10 @@
 import GetCurrentHour from '../../components/getCurrentTime'
 import UserSelectProfile from '../../components/userSelectProfile'
-import Linkedin from '../../svgs/Linkedin.svg'
-import Instagram from '../../svgs/Instagram.svg'
-import Github from '../../svgs/Github.svg'
-import Email from '../../svgs/Email.svg'
-import ArrowRigth from '../../svgs/ArrowRigth.svg'
+import Linkedin from '../assets/svgs/Linkedin.svg'
+import Instagram from '../assets/svgs/Instagram.svg'
+import Github from '../assets/svgs/Github.svg'
+import Email from '../assets/svgs/Email.svg'
+import ArrowRigth from '../assets/svgs/ArrowRigth.svg'
 
 export default function Home() {
   return (
