@@ -1,5 +1,5 @@
 'use client'
-
+import persona from '@/assets/img/persona.jpg'
 import Image from 'next/image'
 import React from 'react'
 
@@ -12,11 +12,10 @@ export default function UserSelectProfile() {
     <div className="w-300px h-300px rounded-full overflow-hidden hover:scale-125 transition duration-500 cursor-pointer">
       <button onClick={sendAlert} className="">
         <Image
-          src="/1000_F_265729869_mYcOBHGd1ifo9ocwmfDIc4tl5jN7M7sy.jpg"
-          alt="person-image"
+          src={persona}
           width={256}
           height={256}
-          objectFit="cover"
+          alt="person-image"
           className="relative rounded-full"
         />
       </button>
