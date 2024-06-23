@@ -29,7 +29,11 @@ export default function SocialMediaButton({
   }
 
   return (
-    <Link href={href} className="flex relative group items-center">
+    <Link
+      href={href}
+      target="_blank"
+      className="flex relative group items-center"
+    >
       {/* Circulo com icon */}
       <div className="bg-gray-800 z-10 rounded-full flex items-center justify-center w-16 h-16">
         {platform === 'github' && <GithubIcon size={36} />}
