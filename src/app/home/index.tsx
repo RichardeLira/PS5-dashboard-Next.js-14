@@ -10,7 +10,6 @@ export default function Home() {
       <div className="absolute top-8 right-12 text-xl font-sans font-light text-white">
         {getCurrentTime()}
       </div>
-
       <div className="absolute w-full flex flex-col gap-8 items-center top-1/4">
         <div className="flex items-center flex-col gap-4">
           <h1>Hi, I’m Richarde Lira</h1>
@@ -25,7 +24,6 @@ export default function Home() {
           className="relative rounded-full"
         />
       </div>
-
       <div className="absolute left-8 flex flex-col gap-4 bottom-8">
         <SocialMediaButton
           type="social"

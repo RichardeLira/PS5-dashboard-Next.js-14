@@ -7,7 +7,7 @@ import GithubIcon from '@/components/icons/github-icon'
 
 export default function About() {
   return (
-    <div className="h-full flex gap-24 px-48 flex-col items-center from-blue-700 from-25% to-80% to-blue-900 bg-gradient-to-bl">
+    <div className="flex gap-24 px-48 flex-col items-center from-blue-700 from-25% to-80% to-blue-900 bg-gradient-to-bl">
       <Navbar />
 
       <div className="px-48 flex flex-col gap-16 pb-24">
