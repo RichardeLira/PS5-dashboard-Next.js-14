@@ -17,7 +17,11 @@ export default function Navbar() {
   return (
     <div className="w-full h-24 flex items-center justify-between">
       <div className="flex items-center gap-16">
-        <ArrowLeft size={32} className="text-white" />
+        {pathname !== '/' ? (
+          <ArrowLeft size={32} className="text-white" />
+        ) : (
+          <div className="w-8" />
+        )}
 
         <Link href="/">
           <span

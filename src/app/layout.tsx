@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-// import { Poppins } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
 
-// const poppins = Poppins({
-//   weight: ['400', '500', '600', '700'],
-//   subsets: ['latin'],
-// })
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -19,8 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <main className="h-screen overflow-y-auto">{children}</main>
+      <body className={poppins.className}>
+        <main className="h-screen">{children}</main>
       </body>
     </html>
   )

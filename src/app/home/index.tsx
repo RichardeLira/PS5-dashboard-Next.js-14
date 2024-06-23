@@ -2,13 +2,13 @@ import SocialMediaButton from './_components/social-media-button'
 import persona from '@/assets/img/persona.jpg'
 import Image from 'next/image'
 
-import { getCurrentTime } from '@/util/getCurrentTime'
+import Navbar from '@/components/layout/navbar'
 
 export default function Home() {
   return (
     <div className="h-full bg-blue-900 relative">
-      <div className="absolute top-8 right-12 text-xl font-sans font-light text-white">
-        {getCurrentTime()}
+      <div className="px-48">
+        <Navbar />
       </div>
       <div className="absolute w-full flex flex-col gap-8 items-center top-1/4">
         <div className="flex items-center flex-col gap-4">
