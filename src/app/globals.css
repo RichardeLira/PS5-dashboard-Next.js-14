@@ -27,8 +27,12 @@ h2 {
 
 @layer utilities {
   .text-stroke {
+    /* TO DO: Verificar compartibilidade com navegadores */
+    -webkit-text-stroke: 1px #5E8FD8;
+
+    /* Opção com sombreamento */
+    
     /* text-shadow: -1px -1px 0 #5E8FD8, 1px -1px 0 #5E8FD8, -1px 1px 0 #5E8FD8, 1px 1px 0 #5E8FD8;
     color: #02050D; */
-    -webkit-text-stroke: 1px #5E8FD8;
   }
 }

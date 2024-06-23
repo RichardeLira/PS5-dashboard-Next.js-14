@@ -12,17 +12,6 @@ const config: Config = {
         display: ['Poppins'],
       },
 
-      keyframes: {
-        pulseWidth: {
-          '0%, 100%': { width: '0.5rem' },
-          '50%': { width: '105%' },
-        },
-      },
-
-      animation: {
-        pulseWidth: 'pulseWidth 5s ease-in-out infinite',
-      },
-
       colors: {
         blue: {
           '50': '#eff4fb',
@@ -49,6 +38,17 @@ const config: Config = {
           '800': '#121212',
           '900': '#090909',
         },
+      },
+
+      keyframes: {
+        pulseWidth: {
+          '0%, 100%': { width: '0.5rem' },
+          '50%': { width: '105%' },
+        },
+      },
+
+      animation: {
+        pulseWidth: 'pulseWidth 5s ease-in-out infinite',
       },
     },
   },

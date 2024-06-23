@@ -1,18 +1,15 @@
+import SocialMediaButton from './_components/social-media-button'
+import persona from '@/assets/img/persona.jpg'
 import Image from 'next/image'
 
-import persona from '@/assets/img/persona.jpg'
-import SocialMediaButton from './_components/social-media-button'
+import { getCurrentTime } from '@/util/getCurrentTime'
 
 export default function Home() {
   return (
     <div className="h-full bg-blue-900 relative">
-      {/* <div className="fixed h-full bg-[#040813] w-[85px] right-0 flex justify-center items-center">
-        <ArrowRigth></ArrowRigth>
-      </div> */}
-
-      {/* <div className="text-2xl text-white flex flex-col items-end mt-4 mr-7 font-sans font-light">
-          <GetCurrentHour />
-        </div> */}
+      <div className="absolute top-8 right-12 text-xl font-sans font-light text-white">
+        {getCurrentTime()}
+      </div>
 
       <div className="absolute w-full flex flex-col gap-4 items-center top-1/4">
         <h1>Hi, I’m Richarde Lira</h1>
