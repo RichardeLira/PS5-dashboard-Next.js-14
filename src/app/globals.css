@@ -13,7 +13,7 @@ h1, h2, span {
 
 h1 {
   /* text-6xl font-bold */
-  font-size: 3.75rem; /* 36px */
+  font-size: 3.75rem; /* 60px */
   line-height: 1;
   font-weight: 700;
 }
@@ -26,13 +26,31 @@ h2 {
 }
 
 @layer utilities {
-  .text-stroke {
-    /* TO DO: Verificar compartibilidade com navegadores */
+  .text-reveal {
+    color: transparent;
     -webkit-text-stroke: 1px #5E8FD8;
+    position: relative;
+  }
+  
+  .text-reveal::before {
+    content: "Software Developer";
+    position: absolute;
+    white-space: nowrap;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    color: #5E8FD8;
+    border-right: 4px solid #5E8FD8;
+    animation: slidein 5s ease-in-out infinite;
+  }
 
-    /* Opção com sombreamento */
-    
-    /* text-shadow: -1px -1px 0 #5E8FD8, 1px -1px 0 #5E8FD8, -1px 1px 0 #5E8FD8, 1px 1px 0 #5E8FD8;
-    color: #02050D; */
+  @keyframes slidein {
+    0%, 100% {
+      width: 0%;
+      filter: drop-shadow(0 0 20px #5E8FD8);
+    }
+    50% {
+      width: 102%;
+    }
   }
 }

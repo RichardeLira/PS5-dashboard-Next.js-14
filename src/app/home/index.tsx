@@ -1,5 +1,4 @@
 import SocialMediaButton from './_components/social-media-button'
-import TextReveal from './_components/text-reveal'
 import persona from '@/assets/img/persona.jpg'
 import Image from 'next/image'
 
@@ -12,9 +11,11 @@ export default function Home() {
         {getCurrentTime()}
       </div>
 
-      <div className="absolute w-full flex flex-col gap-4 items-center top-1/4">
-        <h1>Hi, I’m Richarde Lira</h1>
-        <TextReveal text="Software Developer" />
+      <div className="absolute w-full flex flex-col gap-8 items-center top-1/4">
+        <div className="flex items-center flex-col gap-4">
+          <h1>Hi, I’m Richarde Lira</h1>
+          <h2 className="text-reveal">Software Developer</h2>
+        </div>
 
         <Image
           src={persona}
@@ -25,7 +26,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="absolute left-8 flex gap-4 bottom-8">
+      <div className="absolute left-8 flex flex-col gap-4 bottom-8">
         <SocialMediaButton
           type="social"
           platform="github"
