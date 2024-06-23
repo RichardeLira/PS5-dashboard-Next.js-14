@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <main className="h-screen">{children}</main>
+        <main className="h-full overflow-y-auto">{children}</main>
       </body>
     </html>
   )
