@@ -1,4 +1,5 @@
 import SocialMediaButton from './_components/social-media-button'
+import TextReveal from './_components/text-reveal'
 import persona from '@/assets/img/persona.jpg'
 import Image from 'next/image'
 
@@ -13,15 +14,7 @@ export default function Home() {
 
       <div className="absolute w-full flex flex-col gap-4 items-center top-1/4">
         <h1>Hi, I’m Richarde Lira</h1>
-        <div className="relative">
-          <div className="absolute h-full overflow-hidden animate-pulseWidth">
-            <div className="relative">
-              <h2 className="text-blue-500 text-nowrap">Software Devolper</h2>
-              <div className="absolute right-0 top-0 w-2 h-full bg-blue-600" />
-            </div>
-          </div>
-          <h2 className="text-stroke text-transparent">Software Devolper</h2>
-        </div>
+        <TextReveal text="Software Developer" />
 
         <Image
           src={persona}
