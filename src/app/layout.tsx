@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <div className="h-screen relative">
           <Navbar />
-          <main className="h-full overflow-y-auto">{children}</main>
+          <main className="h-full">{children}</main>
         </div>
       </body>
     </html>

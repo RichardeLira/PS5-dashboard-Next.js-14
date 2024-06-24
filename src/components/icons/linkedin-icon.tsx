@@ -1,6 +1,4 @@
-interface IconProps {
-  size: number
-}
+import { IconProps } from '@/types/icon-props'
 
 export default function LinkedinIcon({ size }: IconProps) {
   return (
