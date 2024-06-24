@@ -2,14 +2,9 @@ import SocialMediaButton from './_components/social-media-button'
 import persona from '@/assets/img/persona.jpg'
 import Image from 'next/image'
 
-import Navbar from '@/components/layout/navbar'
-
 export default function Home() {
   return (
     <div className="h-full bg-blue-900 relative">
-      <div className="px-48">
-        <Navbar />
-      </div>
       <div className="absolute w-full flex flex-col gap-8 items-center top-1/4">
         <div className="flex items-center flex-col gap-4">
           <h1>Hi, I’m Richarde Lira</h1>
@@ -24,6 +19,7 @@ export default function Home() {
           className="relative rounded-full"
         />
       </div>
+
       <div className="absolute left-8 flex flex-col gap-4 bottom-8">
         <SocialMediaButton
           type="social"

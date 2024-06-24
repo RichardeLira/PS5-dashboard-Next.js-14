@@ -15,7 +15,7 @@ export default function Navbar() {
   }, [pathname])
 
   return (
-    <div className="w-full h-24 flex items-center justify-between">
+    <div className="z-10 absolute top-0 left-0 w-full px-48 h-24 flex items-center justify-between">
       <div className="flex items-center gap-16">
         {pathname !== '/' ? (
           <ArrowLeft size={32} className="text-white" />
@@ -31,6 +31,17 @@ export default function Navbar() {
             )}
           >
             Home
+          </span>
+        </Link>
+
+        <Link href="/project">
+          <span
+            className={cn(
+              'hover:text-white transition-colors duration-200',
+              pathname === '/project' ? 'text-white' : 'text-gray-100',
+            )}
+          >
+            Projetos
           </span>
         </Link>
 
