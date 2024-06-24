@@ -1,18 +1,21 @@
 'use client'
 
-import { cn } from '@/lib/utils'
-import { getCurrentTime } from '@/util/getCurrentTime'
-import { ArrowLeft, CaretDown } from '@phosphor-icons/react/dist/ssr'
 import Link from 'next/link'
+
+import { ArrowLeft, CaretDown } from '@phosphor-icons/react/dist/ssr'
+import { getCurrentTime } from '@/util/getCurrentTime'
 import { usePathname } from 'next/navigation'
-import { useEffect } from 'react'
+import { cn } from '@/lib/utils'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 
 export default function Navbar() {
   const pathname = usePathname()
-
-  useEffect(() => {
-    console.log(pathname)
-  }, [pathname])
 
   return (
     <div className="z-10 absolute top-0 left-0 w-full px-48 h-24 flex items-center justify-between">
@@ -59,8 +62,25 @@ export default function Navbar() {
 
       <div className="flex items-center gap-4">
         <div className="flex gap-2">
-          <span>pt</span>
-          <CaretDown size={24} className="text-white" />
+          <Select defaultValue="pt">
+            <SelectTrigger className="bg-transparent gap-2 text-white focus-visible:outline-none">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent className="bg-gray-800 max-h-[--radix-select-content-available-height] w-[--radix-select-trigger-width]">
+              <SelectItem
+                className="data-[highlighted]:bg-gray-600 data-[state='checked']:bg-gray-600"
+                value="pt"
+              >
+                PT
+              </SelectItem>
+              <SelectItem
+                className="hover:bg-gray-700 data-[highlighted]:bg-gray-500"
+                value="en"
+              >
+                EN
+              </SelectItem>
+            </SelectContent>
+          </Select>
         </div>
 
         <span className="text-xl font-sans font-light text-white">
