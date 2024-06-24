@@ -1,7 +1,6 @@
 import Data from '../data/projects/projects'
 import Image from 'next/image'
 import { Poppins } from 'next/font/google'
-import GridShow from '../assets/svgs/GradeChange.svg'
 
 interface projectData {
   Title: string
