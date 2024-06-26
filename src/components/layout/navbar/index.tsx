@@ -2,9 +2,9 @@
 
 import Link from 'next/link'
 
-import { ArrowLeft, CaretDown } from '@phosphor-icons/react/dist/ssr'
 import { getCurrentTime } from '@/util/getCurrentTime'
 import { usePathname } from 'next/navigation'
+import { ArrowLeft } from '@phosphor-icons/react/dist/ssr'
 import { cn } from '@/lib/utils'
 import {
   Select,

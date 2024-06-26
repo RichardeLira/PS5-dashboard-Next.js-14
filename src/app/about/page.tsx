@@ -5,7 +5,7 @@ import GithubIcon from '@/components/icons/github-icon'
 
 export default function About() {
   return (
-    <div className="flex h-full gap-16 pt-36 overflow-y-auto px-96 pb-24 flex-col items-center from-blue-700 from-25% to-80% to-blue-900 bg-gradient-to-bl">
+    <div className="flex h-full gap-16 pt-36 overflow-y-auto scrollbar scrollbar-track-blue-800 scrollbar-thumb-blue-700 px-96 pb-24 flex-col items-center from-blue-700 from-25% to-80% to-blue-900 bg-gradient-to-bl">
       <section className="flex items-center justify-center flex-col gap-8">
         <div>
           <h2 className="px-2">Sobre mim</h2>
