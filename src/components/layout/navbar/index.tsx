@@ -68,13 +68,13 @@ export default function Navbar() {
             </SelectTrigger>
             <SelectContent className="bg-gray-800 max-h-[--radix-select-content-available-height] w-[--radix-select-trigger-width]">
               <SelectItem
-                className="data-[highlighted]:bg-gray-600 data-[state='checked']:bg-gray-600"
+                className="data-[highlighted]:bg-gray-600 hover:bg-gray-700 data-[state='checked']:bg-gray-600"
                 value="pt"
               >
                 PT
               </SelectItem>
               <SelectItem
-                className="hover:bg-gray-700 data-[highlighted]:bg-gray-500"
+                className="hover:bg-gray-700 data-[highlighted]:bg-gray-600 data-[state='checked']:bg-gray-600"
                 value="en"
               >
                 EN
