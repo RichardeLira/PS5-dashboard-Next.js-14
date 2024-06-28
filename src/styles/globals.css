@@ -2,32 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, span, p {
+  color: white;
+}
+
+h1 {
+  /* text-6xl font-bold */
+  font-size: 3.75rem; /* 60px */
+  line-height: 1;
+  font-weight: 700;
+}
+
+h2 {
+  /* text-4xl font-bold */
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.75rem;
+  font-weight: 700;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .text-reveal {
+    color: transparent;
+    -webkit-text-stroke: 1px #5E8FD8;
+    position: relative;
+  }
+  
+  .text-reveal::before {
+    content: "Software Developer";
+    position: absolute;
+    white-space: nowrap;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    color: #5E8FD8;
+    border-right: 4px solid #5E8FD8;
+    animation: slidein 5s ease-in-out infinite;
+  }
+
+  @keyframes slidein {
+    0%, 100% {
+      width: 0%;
+      filter: drop-shadow(0 0 20px #5E8FD8);
+    }
+    50% {
+      width: 102%;
+    }
   }
 }
