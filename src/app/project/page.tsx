@@ -11,6 +11,9 @@ import Demo from '../../assets/svgs/Demo.svg'
 import Code from '../../assets/svgs/Code.svg'
 import GridImage from '@/components/GridImage'
 import GridShow from '../../assets/svgs/GradeChange.svg'
+import Navbar from '@/components/layout/navbar'
+import ListProjects from '@/components/ListProjects'
+import { Button } from '@/components/ui/button'
 
 const poppinsHome = Poppins({
   subsets: ['latin'],
@@ -31,6 +34,8 @@ export default function Page() {
     'Projeto de uma plataforma para cursos online construída em Next.js e Tailwind CSS.',
   )
 
+  const [selectionProjectView, setSelectionProjectView] = useState(false)
+
   const [animationKey, setAnimationKey] = useState(0)
 
   useEffect(() => {
@@ -40,17 +45,8 @@ export default function Page() {
   return (
     <main className="bg-[#030712] flex flex-col h-screen overflow-auto">
       <div className=" ml-10">
-        <div className="flex flex-row space-x-20 items-center mt-4">
-          <div className="mt-3 ">
-            <ArrowLeft />
-          </div>
-
-          <div
-            className={`${poppinsHome.className} flex flex-row space-x-10 mt-3`}
-          >
-            <h2 className="text-white  font-medium text-4xl ">Home</h2>
-            <h2 className="text-[#C9C9C9]  font-medium text-4xl">Sobre mim</h2>
-          </div>
+        <div className="px-48">
+          <Navbar />
         </div>
 
         <div
@@ -84,18 +80,35 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="flex felx-row flex-col justify-center items-center mt-10">
-        <div className="flex flex-row w-1/2">
-          <h1 className={`${poppinsHome.className} text-white text-2xl `}>
+      <div className="flex flex-col justify-center items-center mt-10">
+        <div className="w-1/2 relative flex flex-row justify-center items-center">
+          <h1 className="text-white text-2xl absolute left-1/2 transform -translate-x-1/2">
             Projetos
           </h1>
+          <div className={`flex flex-row justify-center items-center ml-auto`}>
+            <h1 className={`${poppinsHome.className} text-white text-lg`}>
+              Grade
+            </h1>
 
-          <GridShow />
+            <GridShow>
+              <Button
+                onClick={() => {
+                  console.log(selectionProjectView)
+                  setSelectionProjectView(!selectionProjectView)
+                }}
+              ></Button>
+            </GridShow>
+          </div>
         </div>
-
-        <div className="mt-5">
-          <GridImage setTitle={setTitle} setDescription={setDescription} />
-        </div>
+        {selectionProjectView ? (
+          <div className="mt-5">
+            <GridImage setTitle={setTitle} setDescription={setDescription} />
+          </div>
+        ) : (
+          <div className="mt-5">
+            <ListProjects />
+          </div>
+        )}
       </div>
     </main>
   )
