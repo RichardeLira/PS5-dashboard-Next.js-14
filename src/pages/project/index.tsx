@@ -1,7 +1,10 @@
 import React from 'react'
 import { Poppins } from 'next/font/google'
-import { Code } from '@phosphor-icons/react'
-import GridImage from '@/components/pages/project/grid-image'
+import GridImage from '@/components/pages/project/grid-project'
+import DemoIcon from '@/components/icons/demo-icon'
+import CodeIcon from '@/components/icons/code-icon'
+import PrismaIcon from '@/components/icons/prisma-icon'
+import Carrouselproject from '@/components/pages/project/carrousel-project'
 
 const poppinsHome = Poppins({
   subsets: ['latin'],
@@ -15,41 +18,30 @@ const poppinsDescription = Poppins({
 
 export default function Project() {
   return (
-    <main className="bg-[#030712] flex flex-col h-screen overflow-auto">
-      <div className=" ml-10">
-        <div className="flex flex-row space-x-20 items-center mt-4">
-          <div className="mt-3 ">{/* <ArrowLeft /> */}</div>
-          <div
-            className={`${poppinsHome.className} flex flex-row space-x-10 mt-3`}
-          >
-            <h2 className="text-white  font-medium text-4xl ">Home</h2>
-            <h2 className="text-[#C9C9C9] font-medium text-4xl">Sobre mim</h2>
-          </div>
+    <div className="bg-[#030712] flex flex-col overflow-auto h-screen">
+      <div className="px-48 pt-28">
+        <div className="flex flex-row space-x-5">
+          <PrismaIcon size={80}></PrismaIcon>
+          <PrismaIcon size={80}></PrismaIcon>
+          <PrismaIcon size={80}></PrismaIcon>
+          <PrismaIcon size={80}></PrismaIcon>
         </div>
 
-        <div className="flex flex-row  mt-12">
-          {/* <NodeSvg />
-          <NextSvg />
-          <PrismaSvg /> 
-          <TailWind /> */}
-        </div>
-
-        <div className={`flex flex-col  mt-20`}>
-          <h1 className={`${poppinsHome.className} text-white text-5xl`}>
+        <div className={`flex flex-col  pt-10`}>
+          <h1 className={`${poppinsHome.className} text-white text-4xl`}>
             Videoplatform
           </h1>
           <h3
-            className={`${poppinsDescription.className} text-white text-3xl w-1/3 mt-5 `}
+            className={`${poppinsDescription.className} text-white text-xl w-1/3 mt-5 `}
           >
             Projeto de uma plataforma para cursos online construída em Next.js e
             Tailwind CSS.
           </h3>
         </div>
 
-        <div className="flex flex-row mt-10 -ml-2">
-          <Code />
-          {/* <Demo />
-          <Code /> */}
+        <div className="flex flex-row mt-10 space-x-5">
+          <DemoIcon size={30}></DemoIcon>
+          <CodeIcon size={30}></CodeIcon>
         </div>
       </div>
 
@@ -58,10 +50,10 @@ export default function Project() {
           Projetos
         </h1>
 
-        <div className="mt-5">
-          <GridImage />
+        <div className="pt-24 flex flex-row justify-center items-center ">
+          <Carrouselproject></Carrouselproject>
         </div>
       </div>
-    </main>
+    </div>
   )
 }
