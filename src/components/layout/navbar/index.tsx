@@ -3,7 +3,6 @@
 import Link from 'next/link'
 
 import { getCurrentTime } from '@/util/getCurrentTime'
-import { usePathname } from 'next/navigation'
 import { ArrowLeft } from '@phosphor-icons/react/dist/ssr'
 import { cn } from '@/lib/utils'
 import {
@@ -13,9 +12,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import { useRouter } from 'next/router'
+import { useTranslations } from 'next-intl'
 
 export default function Navbar() {
-  const pathname = usePathname()
+  const router = useRouter()
+  const { pathname, asPath, query } = router
+  const t = useTranslations('navbar')
+
+  const changeLang = (value: string) => {
+    router.push({ pathname, query }, asPath, { locale: value })
+  }
 
   return (
     <div className="z-10 absolute top-0 left-0 w-full px-48 h-24 flex items-center justify-between">
@@ -33,7 +40,7 @@ export default function Navbar() {
               pathname === '/' ? 'text-white' : 'text-gray-100',
             )}
           >
-            Home
+            {t('home')}
           </span>
         </Link>
 
@@ -44,7 +51,7 @@ export default function Navbar() {
               pathname === '/project' ? 'text-white' : 'text-gray-100',
             )}
           >
-            Projetos
+            {t('projects')}
           </span>
         </Link>
 
@@ -55,21 +62,21 @@ export default function Navbar() {
               pathname === '/about' ? 'text-white' : 'text-gray-100',
             )}
           >
-            Sobre mim
+            {t('about')}
           </span>
         </Link>
       </div>
 
       <div className="flex items-center gap-4">
         <div className="flex gap-2">
-          <Select defaultValue="pt">
+          <Select defaultValue={router.locale} onValueChange={changeLang}>
             <SelectTrigger className="bg-transparent gap-2 text-white focus-visible:outline-none">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="bg-gray-800 max-h-[--radix-select-content-available-height] w-[--radix-select-trigger-width]">
               <SelectItem
                 className="data-[highlighted]:bg-gray-600 hover:bg-gray-700 data-[state='checked']:bg-gray-600"
-                value="pt"
+                value="pt-br"
               >
                 PT
               </SelectItem>

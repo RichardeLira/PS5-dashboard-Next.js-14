@@ -33,7 +33,7 @@ h2 {
   }
   
   .text-reveal::before {
-    content: "Software Developer";
+    /* content: "Software Developer"; */
     position: absolute;
     white-space: nowrap;
     width: 0%;

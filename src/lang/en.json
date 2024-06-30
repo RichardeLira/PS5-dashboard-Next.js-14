@@ -1,0 +1,28 @@
+{
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About me"
+  },
+  "home": {
+    "title": "Hi, I’m Richarde Lira",
+    "subtitle": {
+      "text": "Software Developer",
+      "content": "Software_Developer"
+    }
+  },
+  "about": {
+    "aboutMe": {
+      "title": "About me",
+      "text": "I'm a passionate software developer with over 5 years of experience in creating innovative web solutions. My journey into development began in my teenage years when I discovered the power of programming and started building my own websites. Since then, I've developed skills in various technologies including JavaScript, React, Node.js, and Python. I enjoy tackling complex problems and am always seeking new challenges to improve my skills. In my free time, I like to contribute to open-source projects and explore new technological trends. I'm committed to continuous learning and believe that collaboration and knowledge sharing are key to growth in the tech industry."
+    },
+    "skills": {
+      "title": "Skills",
+      "tab": {
+        "all": "All",
+        "others": "Others"
+      }
+    },
+    "contact": "Contact"
+  }
+}

@@ -1,0 +1,28 @@
+{ 
+  "navbar": {
+    "home": "Início",
+    "projects": "Projetos",
+    "about": "Sobre mim"
+  },
+  "home": {
+    "title": "Olá, eu sou Richarde Lira",
+    "subtitle": {
+      "text": "Desenvolvedor de Software",
+      "content": "Desenvolvedor_de_Software"
+    }
+  },
+  "about": {
+    "aboutMe": {
+      "title": "Sobre mim",
+      "text": "Sou um desenvolvedor de software apaixonado com mais de 5 anos de experiência na criação de soluções web inovadoras. Minha jornada no desenvolvimento começou na adolescência, quando descobri o poder da programação e comecei a criar meus próprios sites. Desde então, desenvolvi habilidades em várias tecnologias, incluindo JavaScript, React, Node.js e Python. Adoro resolver problemas complexos e estou sempre em busca de novos desafios para melhorar minhas habilidades. No meu tempo livre, gosto de contribuir para projetos de código aberto e explorar novas tendências tecnológicas. Estou comprometido com a aprendizagem contínua e acredito que a colaboração e a partilha de conhecimento são fundamentais para o crescimento na área da tecnologia."
+    },
+    "skills": {
+      "title": "Habilidades",
+      "tab": {
+        "all": "Todas",
+        "others": "Outras"
+      }
+    },
+    "contact": "Contato"
+  }
+}

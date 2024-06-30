@@ -5,6 +5,7 @@ import NodeIcon from '@/components/icons/node-icon'
 import PrismaIcon from '@/components/icons/prisma-icon'
 import TailwindIcon from '@/components/icons/tailwind-icon'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { useTranslations } from 'next-intl'
 
 export default function Skills() {
   // TO DO: Separar em outro arquivo depois
@@ -41,13 +42,15 @@ export default function Skills() {
     },
   ]
 
+  const t = useTranslations('about')
+
   return (
     <Tabs defaultValue="all">
       <TabsList className="flex gap-4">
-        <TabsTrigger value="all">Todas</TabsTrigger>
+        <TabsTrigger value="all">{t('skills.tab.all')}</TabsTrigger>
         <TabsTrigger value="frontend">Front-End</TabsTrigger>
         <TabsTrigger value="backend">Back-End</TabsTrigger>
-        <TabsTrigger value="others">Outras</TabsTrigger>
+        <TabsTrigger value="others">{t('skills.tab.others')}</TabsTrigger>
       </TabsList>
       <TabsContent value="all" className="mt-6">
         <div
