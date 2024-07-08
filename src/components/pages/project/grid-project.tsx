@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import Data from '@/data/projects'
@@ -38,7 +40,7 @@ export default function GridProject({
             }`}
           >
             <div
-              className={` transition-transform duration-300 relative ${
+              className={`transition-transform duration-300 relative ${
                 selectedTitle === item.Title ? 'scale-110' : ''
               }`}
             >
@@ -49,8 +51,13 @@ export default function GridProject({
                 alt={item.Title}
                 className="object-cover rounded-2xl "
               ></Image>
+
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className=" rounded-2xl absolute inset-0 bg-purple-400 opacity-0 hover:opacity-60"></div>
+                <div className="flex items-center justify-center rounded-2xl absolute inset-0 bg-[#5A67D8] opacity-0 hover:opacity-90">
+                  <h1 className="font-bold text-2xl text-black ">
+                    {item.Title}
+                  </h1>
+                </div>
               </div>
             </div>
           </Button>
