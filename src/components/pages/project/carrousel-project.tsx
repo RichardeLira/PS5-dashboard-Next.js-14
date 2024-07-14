@@ -26,11 +26,13 @@ export default function Carrouselproject({
   size,
   setSlideMove,
   slideMove,
+  titleState,
 }: ViewDataSlideProps) {
   function handleClickButton(title: string, description: string) {
+    if (!titleState) setSlideMove(!slideMove)
+
     setDescription(description)
     setTitle(title)
-    setSlideMove(!slideMove)
   }
 
   return (

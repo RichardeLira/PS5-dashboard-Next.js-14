@@ -4,4 +4,5 @@ export interface ViewDataSlideProps {
   size: number
   slideMove: boolean
   setSlideMove: (move: boolean) => void
+  titleState: string
 }
