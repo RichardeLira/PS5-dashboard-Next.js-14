@@ -44,13 +44,11 @@ h2 {
     animation: slidein 5s ease-in-out infinite;
   }
 
-  @keyframes slidein {
-    0%, 100% {
-      width: 0%;
-      filter: drop-shadow(0 0 20px #5E8FD8);
+@layer base {
+    * {
+      @apply border-border;
     }
-    50% {
-      width: 102%;
+    body {
+      @apply bg-background text-foreground;
     }
   }
-}

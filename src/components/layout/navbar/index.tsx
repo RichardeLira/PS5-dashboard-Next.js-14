@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/select'
 import { useRouter } from 'next/router'
 import { useTranslations } from 'next-intl'
+import { useState } from 'react'
 
 export default function Navbar() {
   const router = useRouter()
@@ -23,6 +24,12 @@ export default function Navbar() {
   const changeLang = (value: string) => {
     router.push({ pathname, query }, asPath, { locale: value })
   }
+
+  const [hour, setHour] = useState('')
+
+  setInterval(() => {
+    setHour(getCurrentTime())
+  }, 500)
 
   return (
     <div className="z-10 absolute top-0 left-0 w-full px-48 h-24 flex items-center justify-between">
@@ -90,9 +97,7 @@ export default function Navbar() {
           </Select>
         </div>
 
-        <span className="text-xl font-sans font-light text-white">
-          {getCurrentTime()}
-        </span>
+        <span className="text-xl font-sans font-light text-white">{hour}</span>
       </div>
     </div>
   )
