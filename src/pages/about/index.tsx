@@ -2,26 +2,25 @@ import LinkedinIcon from '@/components/icons/linkedin-icon'
 import EmailIcon from '@/components/icons/email-icon'
 import GithubIcon from '@/components/icons/github-icon'
 import Skills from '@/components/pages/about/skills'
+import { GetStaticPropsContext } from 'next'
+import { useTranslations } from 'next-intl'
 
 export default function About() {
+  const t = useTranslations('about')
+
   return (
     <div className="flex h-full gap-16 pt-36 overflow-y-auto scrollbar scrollbar-track-blue-800 scrollbar-thumb-blue-700 px-96 pb-24 flex-col items-center from-blue-700 from-25% to-80% to-blue-900 bg-gradient-to-bl">
       <section className="flex items-center justify-center flex-col gap-8">
         <div>
-          <h2 className="px-2">Sobre mim</h2>
+          <h2 className="px-2">{t('aboutMe.title')}</h2>
           <div className="w-full h-1 bg-blue-500" />
         </div>
-        <p className="text-center">
-          Projeto de uma plataforma para cursos online construída em Next.js e
-          Tailwind CSS. Projeto de uma plataforma para cursos online construída
-          em Next.js e Tailwind CSS. Projeto de uma plataforma para cursos
-          online construída em Next.js e Tailwind CSS.
-        </p>
+        <p className="text-center">{t('aboutMe.text')}</p>
       </section>
 
       <section className="flex items-center w-full justify-center flex-col gap-8">
         <div>
-          <h2 className="px-2">Habilidades</h2>
+          <h2 className="px-2">{t('skills.title')}</h2>
           <div className="w-full h-1 bg-blue-500" />
         </div>
         <Skills />
@@ -29,7 +28,7 @@ export default function About() {
 
       <section className="flex items-center justify-center flex-col gap-8">
         <div>
-          <h2 className="px-2">Contato</h2>
+          <h2 className="px-2">{t('contact')}</h2>
           <div className="w-full h-1 bg-blue-500" />
         </div>
         <div className="flex gap-8">
@@ -51,4 +50,12 @@ export default function About() {
       </section>
     </div>
   )
+}
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      messages: (await import(`../../lang/${locale}.json`)).default,
+    },
+  }
 }
